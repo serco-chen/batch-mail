@@ -1,12 +1,11 @@
 
 #! /usr/bin/ruby
 require 'rest-client'
-require 'debugger'
 require 'csv'
 def send_template_message
   RestClient.post "https://api:key-APIKEY"\ # Change APIKEY to your api key
   "@api.mailgun.net/v2/mail.teamail.biz/messages",
-  :from => "Sample <sample@126.com>",
+  :from => "Sample <sample@126.com>", # Change to whatever valid email address you want
   :to => recipients_emails,
   :subject => "新产品公告",
   :html => notification_text,
