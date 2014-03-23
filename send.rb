@@ -15,7 +15,7 @@ def send_template_message
   # and it can be create in mailgun control panel.
   :"o:campaign" => 'CAMPNAME',
   :"recipient-variables" => recipient_variables(csv_contacts),
-  :attachment => File.new("test.csv")
+  :attachment => File.new("attachment.pdf") # Change this to your real attachments
 end
 
 class Recipient
